@@ -413,11 +413,15 @@ class Realtime(Overlay):
 
     def timerEvent(self, event):
         """Update when vehicle on track"""
-        if self.last_veh_data_version != minfo.vehicles.dataSetVersion:
-            self.last_veh_data_version = minfo.vehicles.dataSetVersion
-
-            if minfo.vehicles.totalVehicles < 1:
+        try:
+            if api.read is None:
                 return
+                
+            if self.last_veh_data_version != minfo.vehicles.dataSetVersion:
+                self.last_veh_data_version = minfo.vehicles.dataSetVersion
+
+                if minfo.vehicles.totalVehicles < 1:
+                    return
 
             # Get filtered list of vehicles/headers to display
             display_items = self.get_filtered_order()
@@ -465,6 +469,9 @@ class Realtime(Overlay):
                     self.bars_energy[row_idx].hide()
                     self.bars_dmg[row_idx].hide()
                     self.bars_penalty[row_idx].hide()
+        except Exception:
+            # Silently ignore errors to prevent crashes
+            pass
 
     def get_filtered_order(self):
         """Get list of vehicle indices and class headers to display
@@ -744,15 +751,14 @@ class Realtime(Overlay):
         except:
             time_str = "--:--"
         
-        # Laps info - baseado no líder da categoria
+        # Laps info - baseado no líder em corrida, ou no player em quali/prática
         laps_info = "Volta: --"
         try:
             if vehicles:
-                leader_idx = vehicles[0][1]  # vehicles = [(place, veh_idx, is_player), ...]
-                completed = api.read.lap.completed_laps(leader_idx)
-                
                 if api.read.session.in_race():
-                    # Em corrida: mostrar volta atual / total (ou previsão)
+                    # Em corrida: usar líder da categoria
+                    leader_idx = vehicles[0][1]  # vehicles = [(place, veh_idx, is_player), ...]
+                    completed = api.read.lap.completed_laps(leader_idx)
                     total_laps = api.read.session.lap_total()
                     
                     if total_laps > 0:
@@ -775,8 +781,28 @@ class Realtime(Overlay):
                         except:
                             laps_info = f"Volta: {completed}"
                 else:
-                    # Quali/Prática: mostrar apenas volta atual
-                    laps_info = f"Volta: {completed}"
+                    # Quali/Prática: usar voltas do player se for a categoria do player
+                    if is_player_class:
+                        # Encontrar o player na lista de veículos
+                        player_idx = None
+                        for place, veh_idx, is_player in vehicles:
+                            if is_player:
+                                player_idx = veh_idx
+                                break
+                        
+                        if player_idx is not None:
+                            completed = api.read.lap.completed_laps(player_idx)
+                            laps_info = f"Volta: {completed}"
+                        else:
+                            # Fallback para líder se player não encontrado
+                            leader_idx = vehicles[0][1]
+                            completed = api.read.lap.completed_laps(leader_idx)
+                            laps_info = f"Volta: {completed}"
+                    else:
+                        # Outras categorias: usar líder
+                        leader_idx = vehicles[0][1]
+                        completed = api.read.lap.completed_laps(leader_idx)
+                        laps_info = f"Volta: {completed}"
         except:
             pass
         

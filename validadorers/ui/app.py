@@ -399,7 +399,9 @@ class AppWindow(QMainWindow):
         """Quit manager"""
         logger.info("GUI: quit_app called - closing application...")
         try:
-            loader.close()  # must close this first
+            # Importar a função close diretamente do módulo
+            from .. import loader as loader_module
+            loader_module.close()
             logger.info("GUI: loader closed")
         except Exception as e:
             logger.error(f"GUI: Error closing loader: {e}")

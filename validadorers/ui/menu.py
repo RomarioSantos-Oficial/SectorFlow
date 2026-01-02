@@ -81,12 +81,25 @@ class OverlayMenu(QMenu):
             self.app_config.triggered.connect(parent.show_app)
             self.addSeparator()
 
-        # Quit - salvar como atributo para não ser removido da memória
+        # Quit - usar lambda para garantir que a conexão funcione
         self.app_quit = self.addAction(_("quit"))
-        self.app_quit.triggered.connect(parent.quit_app)
+        self.app_quit.triggered.connect(lambda: self._do_quit(parent))
 
         # Refresh menu
         self.aboutToShow.connect(self.refresh_menu)
+
+    def _do_quit(self, parent):
+        """Force quit the application"""
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info("MENU: Quit action triggered from tray")
+        try:
+            parent.quit_app()
+        except Exception as e:
+            logger.error(f"MENU: Error calling quit_app: {e}")
+            # Fallback: forçar saída
+            from PySide6.QtWidgets import QApplication
+            QApplication.quit()
 
     def refresh_menu(self):
         """Refresh menu"""
