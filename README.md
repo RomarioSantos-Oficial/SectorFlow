@@ -166,10 +166,13 @@ Este projeto é licenciado sob a **GNU General Public License v3.0**.
 **Baseado no TinyPedal** - Copyright © 2022-2025 TinyPedal developers
 
 Você pode:
-- ✅ Usar comercialmente
-- ✅ Modificar
-- ✅ Distribuir
+- ✅ Modificar para uso pessoal
+- ✅ Estudar o código
 - ✅ Uso privado
+
+**Restrições:**
+- ❌ Uso comercial não autorizado
+- ❌ Redistribuição sem permissão
 
 Desde que:
 - Mantenha o código fonte aberto
