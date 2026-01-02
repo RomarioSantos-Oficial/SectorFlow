@@ -996,7 +996,7 @@ class Realtime(Overlay):
             class_pos: Position within the class (1-based, 0 means use overall position)
         """
         # Safety check - widget might be closing
-        if self.wcfg is None or not api.is_connected():
+        if self.wcfg is None or api.read is None:
             return
             
         # Position
