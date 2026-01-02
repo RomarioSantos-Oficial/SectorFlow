@@ -1,0 +1,119 @@
+# ===================================
+# Python
+# ===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===================================
+# Virtual Environment
+# ===================================
+venv/
+ENV/
+env/
+.venv/
+.env/
+
+# ===================================
+# IDEs and Editors
+# ===================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# ===================================
+# Build Artifacts
+# ===================================
+build/
+dist/
+*.spec
+*.exe
+*.dll
+*.pyd
+*.manifest
+
+# ===================================
+# Logs
+# ===================================
+*.log
+logs/
+
+# ===================================
+# Testing
+# ===================================
+.tox/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+htmlcov/
+
+# ===================================
+# Type Checking
+# ===================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# ===================================
+# Application Specific
+# ===================================
+*.lock
+*.bak
+*.tmp
+*.temp
+
+# User configuration (keep defaults, ignore user changes)
+# config.json
+
+# ===================================
+# User Data (generated at runtime)
+# ===================================
+# Delta best files are user data
+# deltabest/*.csv
+# deltabest/*.sector
+# deltabest/*.fuel
+# deltabest/*.energy
+# deltabest/*.consumption
+
+# Date files
+date/*.json
+
+# ===================================
+# Do NOT ignore (important files)
+# ===================================
+# Keep these in the repo:
+# !brandlogo/Logo.ico
+# !images/
+# !settings/
+# !requirements.txt
+# !run.py

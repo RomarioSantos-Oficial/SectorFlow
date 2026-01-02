@@ -1,0 +1,50 @@
+{
+    "Hyper - Front Brake": {
+        "failure_thickness": 25.0,
+        "heatmap": "brake_default"
+    },
+    "Hyper - Rear Brake": {
+        "failure_thickness": 25.0,
+        "heatmap": "brake_default"
+    },
+    "LMP2 - Front Brake": {
+        "failure_thickness": 25.0,
+        "heatmap": "brake_default"
+    },
+    "LMP2 - Rear Brake": {
+        "failure_thickness": 25.0,
+        "heatmap": "brake_default"
+    },
+    "GTE - Front Brake": {
+        "failure_thickness": 30.0,
+        "heatmap": "brake_default"
+    },
+    "GTE - Rear Brake": {
+        "failure_thickness": 30.0,
+        "heatmap": "brake_default"
+    },
+    "GT3 - Front Brake": {
+        "failure_thickness": 30.0,
+        "heatmap": "brake_default"
+    },
+    "GT3 - Rear Brake": {
+        "failure_thickness": 30.0,
+        "heatmap": "brake_default"
+    },
+    "LMP3 - Front Brake": {
+        "failure_thickness": 0.0,
+        "heatmap": "brake_default"
+    },
+    "LMP3 - Rear Brake": {
+        "failure_thickness": 0.0,
+        "heatmap": "brake_default"
+    },
+    "LMP2_ELMS - Front Brake": {
+        "failure_thickness": 0.0,
+        "heatmap": "brake_default"
+    },
+    "LMP2_ELMS - Rear Brake": {
+        "failure_thickness": 0.0,
+        "heatmap": "brake_default"
+    }
+}

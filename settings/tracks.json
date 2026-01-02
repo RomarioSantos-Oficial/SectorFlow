@@ -1,0 +1,52 @@
+{
+    "Aut\u00f3dromo Jos\u00e9 Carlos Pace": {
+        "pit_entry": 4208.061,
+        "pit_exit": 333.1445,
+        "pit_speed": 16.5663
+    },
+    "Circuit de la Sarthe": {
+        "pit_entry": 13481.1582,
+        "pit_exit": 393.2159,
+        "pit_speed": 16.5427
+    },
+    "Paul Ricard - ELMS": {
+        "pit_entry": 5498.6519,
+        "pit_exit": 274.1544,
+        "pit_speed": 16.023
+    },
+    "Autodromo Nazionale Monza": {
+        "pit_entry": 5696.8647,
+        "pit_exit": 330.5388,
+        "pit_speed": 16.5895
+    },
+    "Monza Curva Grande Circuit": {
+        "pit_entry": 5662.1694,
+        "pit_exit": 329.9411,
+        "pit_speed": 16.6066
+    },
+    "Autodromo Enzo e Dino Ferrari": {
+        "pit_entry": 0.0,
+        "pit_exit": 222.0319,
+        "pit_speed": 16.0205
+    },
+    "Circuit de Spa-Francorchamps": {
+        "pit_entry": 6793.3218,
+        "pit_exit": 212.1013,
+        "pit_speed": 16.5462
+    },
+    "Sebring International Raceway": {
+        "pit_entry": 4196.0898,
+        "pit_exit": 4756.5049,
+        "pit_speed": 16.6457
+    },
+    "Bahrain International Circuit": {
+        "pit_entry": 5348.1714,
+        "pit_exit": 381.6073,
+        "pit_speed": 16.5511
+    },
+    "Circuit of the Americas": {
+        "pit_entry": 0.0,
+        "pit_exit": 406.2807,
+        "pit_speed": 16.5385
+    }
+}

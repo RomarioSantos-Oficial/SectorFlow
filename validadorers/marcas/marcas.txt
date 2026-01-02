@@ -1,0 +1,52 @@
+---------- Hyper ---------
+
+---- Marca-------------------------                   ---------------Medelo---------------
+
+Alpine	------------------------	A424
+Aston Martin	------------------------	Valkyrie AMR-LMH
+BMW	------------------------	M Hybrid V8
+Cadillac	------------------------	V-Series.R
+Ferrari	------------------------	499P
+Glickenhaus	------------------------	SCG 007 LMH
+Isotta	------------------------	Tipo 6-C
+Lamborghini	------------------------	SC63
+Peugeot	------------------------	9X8 (versão 2023), 9X8 (versão 2024)
+Porsche	------------------------	963
+Toyota	------------------------	GR010 Hybrid
+Vanwall	------------------------	Vandervell 680	
+
+
+
+
+---------- LMP2 ---------
+
+
+---- Marca-------------------------                   ---------------Medelo---------------
+
+Oreca	------------------------Oreca 07
+
+
+
+
+---------- LMP3 ---------
+
+---- Marca-------------------------                   ---------------Medelo---------------
+
+Ligier	------------------------Ligier JS P320
+Ginetta ----------------------Ginetta G61-lt-p325 evo
+
+
+---------- LMGT3 ---------
+
+---- Marca------------------------- ------------------------------Medelo---------------
+
+Aston Martin ---------------Aston Martin Vantage AMR LMGT3
+BMW	-------------------------BMW M4 LMGT3
+Corvette----------------------Corvette Z06 LMGT3.R
+Ferrari	------------------------Ferrari 296 LMGT3
+Lamborghini	--------------------Lamborghini Huracán LMGT3 Evo 2
+Lexus----------------------------Lexus RC F LMGT3
+Porsche	-------------------------Porsche 911 GT3 R LMGT3
+Ford-------------------------------Ford Mustang LMGT3
+McLaren----------------------------McLaren 720S LMGT3 Evo
+Mercedes --------------------------Mercedes-AMG LMGT3
